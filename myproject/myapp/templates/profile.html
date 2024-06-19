@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Perfil</title>
+</head>
+<body>
+    <h1>Fotos de Facebook</h1>
+    <div>
+        {% for photo in photos %}
+            <img src="{{ photo }}" alt="Facebook Photo">
+        {% endfor %}
+    </div>
+</body>
+</html>
+    

@@ -1,0 +1,11 @@
+asgiref==3.4.1
+certifi==2024.6.2
+charset-normalizer~=2.0.0
+Django==3.2.25
+django-allauth==0.44.0
+idna==3.7
+requests==2.27.1
+setuptools==58.1.0
+sqlparse==0.4.4
+typing_extensions==4.1.1
+urllib3==1.26.19

@@ -140,7 +140,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 SITE_ID = 1
 
-LOGIN_REDIRECT_URL = '/'
+# myproject/settings.py
+LOGIN_REDIRECT_URL = '/profile/'
+
 
 # Configuración para el correo electrónico
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-+@lxt%z#4pzq2sy)h6e@s=e(zb6+t^^0!0m^5eeh9r7+#5ex_(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['Sorteo.pythonanywhere.com']
 
 
 # Application definition
@@ -141,7 +141,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 SITE_ID = 1
 
 # myproject/settings.py
-LOGIN_REDIRECT_URL = '/profile/'
+LOGIN_REDIRECT_URL = '/myapp/profile/'
 
 
 # Configuración para el correo electrónico

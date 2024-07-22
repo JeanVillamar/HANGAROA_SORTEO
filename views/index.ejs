@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= data.title %></title>
+</head>
+<body>
+    <% if (user) { %>
+        <h1>Bienvenido!</h1>
+        <p>ID de Usuario: <%= user.id %></p>
+        <% if (photos && photos.length > 0) { %>
+            <h2>Fotos:</h2>
+            <ul>
+                <% photos.forEach(photo => { %>
+                    <li>
+                        <p>Fecha de Creación: <%= photo.created_time %></p>
+                        <p>ID: <%= photo.id %></p>
+                        <p>Nombre: <%= photo.name || 'Sin nombre' %></p>
+                        <p>Enlace: <a href="<%= photo.link %>"><%= photo.link %></a></p>
+                        <% if (photo.images && photo.images.length > 0) { %>
+                            <p>Imagen:</p>
+                            <img src="<%= photo.images[0].source %>" alt="Foto de Facebook" style="max-width: 200px;">
+                        <% } %>
+                    </li>
+                <% }) %>
+            </ul>
+            <div>
+                <% if (prevPage) { %>
+                    <a href="/paginate?before=<%= prevPage.split('before=')[1] %>">Anterior</a>
+                <% } %>
+                <% if (nextPage) { %>
+                    <a href="/paginate?after=<%= nextPage.split('after=')[1] %>">Siguiente</a>
+                <% } %>
+            </div>
+        <% } else { %>
+            <p>No se encontraron fotos.</p>
+        <% } %>
+        <a href="/auth/logout">Cerrar Sesión</a>
+    <% } else { %>
+        <a href="/auth/instagram">Iniciar Sesión con Instagram</a>
+        <a href="/auth/facebook">Iniciar Sesión con Facebook</a>
+    <% } %>
+    <h1><%= data.title %></h1>
+    <p><%= data.description %></p>
+</body>
+</html>

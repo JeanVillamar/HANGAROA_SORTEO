@@ -1,0 +1,16 @@
+<app-nav-bar></app-nav-bar>
+<div class="post-viewer">
+    <div class="container">
+        <div class="navbar-profile2">
+            <img src="assets/images/navbar/profile-icon.png" alt="Profile Icon">
+        </div>
+    </div>
+    <h2>Hola, {{ userName }}</h2> <!-- Aquí se muestra el nombre del usuario -->
+    <p>Por favor, selecciona un post</p>
+
+    <div class="images">
+      <div class="image" *ngFor="let photo of photos">
+        <img [src]="photo.image.source" [alt]="'Photo ' + photo.id">
+      </div>
+    </div>
+</div>
